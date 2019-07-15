@@ -202,7 +202,7 @@ class ScreenRecorder constructor(context: Context, data: Intent) : WeakRefHandle
 			audioBufferPool = ByteBufferPool(5, minBytes)
 
 			if (usingMic) {
-				micRecord = AudioRecord(MediaRecorder.AudioSource.MIC,
+				micRecord = AudioRecord(MediaRecorder.AudioSource.DEFAULT,
 						audioConfig!!.sampleRate,
 						AudioFormat.CHANNEL_IN_MONO,
 						AudioFormat.ENCODING_PCM_16BIT,
